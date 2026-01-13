@@ -1,0 +1,14 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+jupyter
+torch
+yfinance
+requests
+random
+joblib
+vaderSentiment
+feedparser
+psycopg2-binary
+sqlalchemy
