@@ -214,3 +214,7 @@ __marimo__/
 *.pkl
 *.csv
 *.json
+
+# outputs folders
+outputs/
+versions/*/outputs/
