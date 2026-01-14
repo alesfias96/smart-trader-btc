@@ -210,3 +210,5 @@ Planned upgrades include:
 - anomaly detection & anomaly blocking
 - safety / risk management system
 - additional market regime detection / filters
+
+➡️ Full roadmap: **docs/ROADMAP.md**
