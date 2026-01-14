@@ -43,7 +43,7 @@ class Config:
     CYCLE_SECONDS: int = 300
 
     # Telegram
-    TELEGRAM_TOKEN: str = "8524176646:AAGklFCaWER2uDsu1Lp3Z0FN6-HHq9vBFQk"
-    TELEGRAM_CHAT_ID: str = "680327109"
+    TELEGRAM_TOKEN: str = ""
+    TELEGRAM_CHAT_ID: str = ""
 
 CFG = Config()
