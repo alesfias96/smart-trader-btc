@@ -312,7 +312,7 @@ def train_and_save() -> None:
     df = download_df(CFG.TICKER, CFG.START, CFG.END)
     scaler, scaled_data = fit_scaler(df)
 
-    prices = df["Close"].values
+    prices = df["Close"].to_numpy(dtype=float).reshape(-1)
     env = MarketEnv(prices, sl_percent=getattr(CFG, "SL_PERCENT", 0.02), tp_percent=getattr(CFG, "TP_PERCENT", 0.05))
 
     n_features = len(ALL_FEATURE_COLS)

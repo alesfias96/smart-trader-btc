@@ -190,7 +190,7 @@ def train_and_save():
     df = add_sentiment_column(df)
     scaler, scaled_data = fit_scaler(df)
 
-    prices = df["Close"].values
+    prices = df["Close"].to_numpy(dtype=float).reshape(-1)
     env = MarketEnv(prices)
 
     input_dim = CFG.WINDOW_SIZE * CFG.N_FEATURES
