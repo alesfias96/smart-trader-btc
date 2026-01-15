@@ -1,5 +1,10 @@
 # config.py
 from dataclasses import dataclass
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+OUTPUTS_DIR = BASE_DIR / "outputs"
+OUTPUTS_DIR.mkdir(exist_ok=True)
 
 @dataclass
 class Config:
@@ -34,8 +39,8 @@ class Config:
     TP_PERCENT: float = 0.05
 
     # Artefatti
-    MODEL_PATH: str = "dqn_btc.pth"
-    SCALER_PATH: str = "scaler.pkl"
+    MODEL_PATH: str = str(OUTPUTS_DIR / "dqn_btc.pth")
+    SCALER_PATH: str = str(OUTPUTS_DIR / "scaler.pkl")
 
     # Live / paper
     LIVE_TRADING: bool = False

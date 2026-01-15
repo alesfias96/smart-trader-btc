@@ -1,5 +1,10 @@
 # config.py
 from dataclasses import dataclass
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+OUTPUTS_DIR = BASE_DIR / "outputs"
+OUTPUTS_DIR.mkdir(exist_ok=True)
 
 @dataclass
 class Config:
@@ -24,8 +29,8 @@ class Config:
     TARGET_UPDATE_EVERY: int = 200  # step
 
     # Artefatti salvati
-    MODEL_PATH: str = "dqn_btc.pth"
-    SCALER_PATH: str = "scaler.pkl"
+    MODEL_PATH: str = str(OUTPUTS_DIR / "dqn_btc.pth")
+    SCALER_PATH: str = str(OUTPUTS_DIR / "scaler.pkl")
 
     # Live / paper trading
     LIVE_TRADING: bool = False  # lascia False
